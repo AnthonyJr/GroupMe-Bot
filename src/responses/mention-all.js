@@ -26,8 +26,10 @@ async function respond() {
 		});
 		
 		resp.response.members.forEach(member => {
-			body.attachments[0].user_ids.push(member.user_id);
-			body.attachments[0].loci.push([0, 3]);
+			if (!resp.response.member.muted) {
+				body.attachments[0].user_ids.push(member.user_id);
+				body.attachments[0].loci.push([0, 3]);
+			}
 		});
 	} catch(err) {
 		console.error(err);
