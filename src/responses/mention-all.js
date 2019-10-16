@@ -3,7 +3,7 @@ const config = require('../config');
 const rp = require('request-promise');
 
 function trigger(msg) {
-	return /(@all|@everyone|@guys)/i.test(msg.text);
+	return /(@all|@everyone|@guys|@crew|@gang|@homies|@negroes)/i.test(msg.text);
 }
 
 async function respond() {
