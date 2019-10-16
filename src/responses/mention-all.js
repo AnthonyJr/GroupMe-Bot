@@ -9,7 +9,7 @@ function trigger(msg) {
 async function respond() {
 	let body = {
 		"bot_id": config.BOT_ID,
-		"text": "^^^",
+		"text": "",
 		"attachments": [{
 			"loci": [],
 			"type": "mentions",
