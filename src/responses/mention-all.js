@@ -24,9 +24,9 @@ async function respond() {
 			url: `https://api.groupme.com/v3/groups/${config.GROUP_ID}?token=${config.ACCESS_TOKEN}`,
 			json: true
 		});
-		console.log(resp.response.members);
-		resp.response.members.forEach(member => {
-			if (!resp.response.member.muted) {
+		console.log(resp.response.members[0].muted);
+		resp.response.members.forEach(member, indnex => {
+			if (!resp.response.member[index].muted) {
 				body.attachments[0].user_ids.push(member.user_id);
 				body.attachments[0].loci.push([0, 3]);
 			}
